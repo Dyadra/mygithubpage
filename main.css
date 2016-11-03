@@ -1,0 +1,47 @@
+/* make sidebar nav vertical */ 
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+    background: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+    display: block;
+    background: none;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+.navigation{
+  background: none;
+  border: none;
+  font-family: 'Handlee', cursive;
+  margin-top: 100px;
+  position: fixed;
+
+}
+
+a:active{
+  background-color: white;
+}
+
+.firstrow{
+  padding-top: 100px;
+}
+
+
+
+
+
+body{
+  background-image: url(img/background.jpg);
+}
+
