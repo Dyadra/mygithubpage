@@ -1,22 +1,29 @@
 /* make sidebar nav vertical */ 
-@media (min-width: 768px) {
+@media (min-width: 200px) {
   .sidebar-nav .navbar .navbar-collapse {
-    padding: 0;
+    padding: 20px;
     max-height: none;
-    background: none;
+    /*background: none;*/
+   background-color: rgba(132,126,137, 0.5);
+     border-radius: 30px;
+
   }
   .sidebar-nav .navbar ul {
     float: none;
     display: block;
     background: none;
+ 
   }
   .sidebar-nav .navbar li {
     float: none;
     display: block;
+
+   
   }
   .sidebar-nav .navbar li a {
     padding-top: 12px;
     padding-bottom: 12px;
+    color: white;
   }
 }
 
@@ -30,9 +37,12 @@ font-family: 'Paperclip';
   background: none;
   border: none;
   font-family: 'Paperclip';
+  color: white;
   font-size: 30px;
-  margin-top: 100px;
+  margin-top: 40px ;
   position: fixed;
+   z-index: +1;
+
 
 }
 
