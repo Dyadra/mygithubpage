@@ -4,7 +4,7 @@
     padding: 20px;
     max-height: none;
     /*background: none;*/
-   background-color: rgba(132,126,137, 0.5);
+   background-color: rgba(132,126,137, 0.9);
      border-radius: 30px;
 
   }
@@ -52,6 +52,18 @@ a:active{
 
 .firstrow{
   padding-top: 100px;
+}
+
+  @media (max-width: 762px){
+   .sidebar-nav .navbar .navbar-collapse {
+      background-color: black;
+  }
+}
+
+@media(max-width: 762px){
+  .navigation{
+    position: absolute;
+  }
 }
 
 
