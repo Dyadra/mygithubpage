@@ -14,16 +14,113 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
   <style type="text/css">
-    p{
-      height: 50%;
-      text-align: center;
-      line-height: 200px;
-    }
+    
+  /*  html { 
+  background: url(img/me3.jpg) no-repeat center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: black;
+  -webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(255,255,255,0)))
+}*/
 
-    h1{
-      text-align: center;
-      line-height: 200px;
-    }
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+
+    body{
+      /*background-image: url(img/me3.jpg);*/
+      /*background-size: height: 70%;  */
+      /*background-repeat: repeat-x;*/
+   
+
+
+     }
+
+h1{
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+  .bg-img {
+  width: 100%;
+  height: 100%;
+  background: url('img/me3.jpg') center center no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+  
+  .bg-img:after {
+    content:url('');
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right,black,white);
+  opacity: .5; 
+  }
+}
+
+
+.cd-headline.rotate-1 .cd-words-wrapper {
+  display: inline-block;
+  perspective: 300px;
+}
+.cd-headline.rotate-1 b {
+  opacity: 0;
+  transform-origin: 50% 100%;
+  transform: rotateX(180deg);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+ 
+.cd-headline.rotate-1 b.is-visible {
+  position: relative;
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+@keyframes cd-rotate-1-in {
+  0% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+  35% {
+    transform: rotateX(120deg);
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
+}
+ 
+@keyframes cd-rotate-1-out {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  35% {
+    transform: rotateX(-40deg);
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+}
 
 
 
@@ -31,55 +128,62 @@
 
 </head>
 <body>
-<div class="container-fluid .navigation">
-<div class="row">
-  <div class="col-sm-3">
-    <div class="sidebar-nav">
-      <div class="navbar navbar-default navigation" role="navigation">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <span class="visible-xs navbar-brand">Sidebar menu</span>
-        </div>
-        <div class="navbar-collapse collapse sidebar-navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="index.html">Home Page</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="#">Resume</a></li>
-            <li><a href="#">Contact Info</a></li>
-            <li><a href="#">About Me</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-  </div>
 
-  <div class="container intro">
-    <h1>Welcome</h1>
-    <p>
-      Hi. I'm Dyadra. I'm really great. Take a Look at some stuff I've done. I like pie.
+
+<section class="cd-intro">
+  <h1 class="cd-headline rotate-1">
+    <span>Hi There! My name is Dyadra.</span>
+    <span class="cd-words-wrapper">
+      <b class="is-visible">Cool</b>
+      <b>Spunky</b>
+      <b>Available For Hire!</b>
+    </span>
+  </h1>
+</section>
 
 
 
-    </p>
-    
+
+  
 
 
 
 
 
 
-  </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
 
+var animationDelay = 2500;
+ 
+animateHeadline($('.cd-headline'));
+ 
+function animateHeadline($headlines) {
+  $headlines.each(function(){
+    var headline = $(this);
+    //trigger animation
+    setTimeout(function(){ hideWord( headline.find('.is-visible') ) }, animationDelay);
+    //other checks here ...
+  });
+}
 
+function hideWord($word) {
+  var nextWord = takeNext($word);
+  switchWord($word, nextWord);
+  setTimeout(function(){ hideWord(nextWord) }, animationDelay);
+}
+ 
+function takeNext($word) {
+  return (!$word.is(':last-child')) ? $word.next() : $word.parent().children().eq(0);
+}
+ 
+function switchWord($oldWord, $newWord) {
+  $oldWord.removeClass('is-visible').addClass('is-hidden');
+  $newWord.removeClass('is-hidden').addClass('is-visible');
+}
 
+</script>
 
-
-
+<div class="bg-img"></div>
 
 
 

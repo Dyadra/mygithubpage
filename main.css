@@ -4,7 +4,7 @@
     padding: 20px;
     max-height: none;
     /*background: none;*/
-   background-color: rgba(132,126,137, 0.9);
+   /*background-color: rgba(132,126,137, 0.9);*/
      border-radius: 30px;
 
   }
@@ -23,8 +23,11 @@
   .sidebar-nav .navbar li a {
     padding-top: 12px;
     padding-bottom: 12px;
-    color: white;
+    color: black;
   }
+}
+.sidebar-nav .navbar ul li:hover a{ 
+     color:white;
 }
 
 
@@ -72,5 +75,9 @@ a:active{
 
 body{
   background-image: url(img/background.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
