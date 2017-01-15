@@ -59,7 +59,7 @@ a:active{
 
   @media (max-width: 762px){
    .sidebar-nav .navbar .navbar-collapse {
-      background-color: black;
+      background-color: gray;
   }
 }
 

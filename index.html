@@ -5,13 +5,16 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>My Website</title>
+	<title>Dyadra Saulsberry</title>
 	 <link href="css/bootstrap.min.css" rel="stylesheet">
 	 <link href="main.css" rel="stylesheet">
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
+
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+
 
   <style type="text/css">
     
@@ -31,26 +34,47 @@ html, body {
 }
 
 
+
+
     body{
-      /*background-image: url(img/me3.jpg);*/
-      /*background-size: height: 70%;  */
-      /*background-repeat: repeat-x;*/
-   
+        background:  #9984D4;
+  /*background-image: linear-gradient(to right,white,black);*/
+   border:50px solid black;
+    animation: pulse 5s infinite;
+      animation-duration: 5s; 
+     font-family: 'Scope One', serif;
 
 
      }
 
+
+     @keyframes pulse {
+  0% {
+    border-color: #9984D4;
+    color: #9984D4;
+  }
+  100% {
+    border-color: #D9FFF8;
+    color: #D9FFF8;
+  }
+}
+
 h1{
   color: white;
-  position: relative;
-  z-index: 1;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 3.3vw;
 }
+h3{
+  color: white;
+}
+/*
   .bg-img {
   width: 100%;
   height: 100%;
-  background: url('img/me3.jpg') center center no-repeat;
+  background: white;
   background-size: cover;
   z-index: -1;
+  position: absolute;
 }
   
   .bg-img:after {
@@ -60,67 +84,94 @@ h1{
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to bottom right,black,white);
-  opacity: .5; 
+  background-image: linear-gradient(to right,white,black);
+  opacity: .9; 
   }
 }
+*/
 
 
-.cd-headline.rotate-1 .cd-words-wrapper {
-  display: inline-block;
-  perspective: 300px;
+
+.wordies{
+    position: absolute;
+    padding-top: 100px;
+    max-width: 50%;
 }
-.cd-headline.rotate-1 b {
-  opacity: 0;
-  transform-origin: 50% 100%;
-  transform: rotateX(180deg);
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 0;
+.col-md-4{
+  
 }
+.boxy{
+  color: #D9FFF8; 
+  min-width: 30%;
+  padding: 20px;
+  margin: 20px;
+     animation: pulse 5s infinite; 
+      animation-duration: 5s; 
+
+}
+
+
+img{
  
-.cd-headline.rotate-1 b.is-visible {
-  position: relative;
-  opacity: 1;
-  transform: rotateX(0deg);
+     opacity: 0.9;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
 }
 
-@keyframes cd-rotate-1-in {
-  0% {
-    transform: rotateX(180deg);
-    opacity: 0;
-  }
-  35% {
-    transform: rotateX(120deg);
-    opacity: 0;
-  }
-  65% {
-    opacity: 0;
-  }
-  100% {
-    transform: rotateX(360deg);
-    opacity: 1;
-  }
+.img-fluid{
+  border: 20px solid;
+  max-width: 100%;
+  height: auto;
 }
- 
-@keyframes cd-rotate-1-out {
-  0% {
-    transform: rotateX(0deg);
-    opacity: 1;
-  }
-  35% {
-    transform: rotateX(-40deg);
-    opacity: 1;
-  }
-  65% {
-    opacity: 0;
-  }
-  100% {
-    transform: rotateX(180deg);
-    opacity: 0;
-  }
+
+@font-face {
+font-family: 'BlOCKCHAIN';
+  src: url('css/BLOCKCHAIN.ttf');
 }
+
+
+.btn-link{
+  color: #D9FFF8;
+  font-size: 80px;
+  font-family: 'Bungee Shade', cursive;
+  padding-top: none;
+  border: none;
+   animation: pulse 5s; 
+      animation-duration: 5s; 
+  
+  
+}
+
+.btn-link:hover{
+  
+  text-decoration: none;
+  color: white;
+
+
+}
+
+  @media (max-width: 775px){
+     .boxy{
+    display: none;
+     }
+
+     .wordies{
+      text-align: center;
+      max-width: 80%;
+     }
+
+     h1{
+      font-size: 30px;
+     }
+
+     h3{
+     font-size: 4.5vw;
+     }
+
+     .btn-link{
+      font-size: 50px;
+     }
+  }
+
 
 
 
@@ -128,62 +179,37 @@ h1{
 
 </head>
 <body>
+ 
+ <div class="container">
+ <div class="row">
+ <div class="col-md-4 col-sm-4 boxy">
+   <img src="img/me5.jpg" class="img-fluid">
+
+ </div>
+ <div class="wordies col-md-5 col-md-offset-5 col-sm-6 col-sm-offset-5">
+ <H1>Dyadra Saulsbery </H1>
+ <br>
+ <br>
+ <br>
+ <h3>
+    Hello World! My name is Dyadra.  I’m cool, I’m spunky, and most of all, I’m available for hire!
+     
+    </h3>
+    <a class="btn btn-link" href="resume.html" role="button">Enter</a>
 
 
-<section class="cd-intro">
-  <h1 class="cd-headline rotate-1">
-    <span>Hi There! My name is Dyadra.</span>
-    <span class="cd-words-wrapper">
-      <b class="is-visible">Cool</b>
-      <b>Spunky</b>
-      <b>Available For Hire!</b>
-    </span>
-  </h1>
-</section>
+ </div>
+
+ </div>
 
 
+</div>
 
 
   
 
 
 
-
-
-
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
-
-var animationDelay = 2500;
- 
-animateHeadline($('.cd-headline'));
- 
-function animateHeadline($headlines) {
-  $headlines.each(function(){
-    var headline = $(this);
-    //trigger animation
-    setTimeout(function(){ hideWord( headline.find('.is-visible') ) }, animationDelay);
-    //other checks here ...
-  });
-}
-
-function hideWord($word) {
-  var nextWord = takeNext($word);
-  switchWord($word, nextWord);
-  setTimeout(function(){ hideWord(nextWord) }, animationDelay);
-}
- 
-function takeNext($word) {
-  return (!$word.is(':last-child')) ? $word.next() : $word.parent().children().eq(0);
-}
- 
-function switchWord($oldWord, $newWord) {
-  $oldWord.removeClass('is-visible').addClass('is-hidden');
-  $newWord.removeClass('is-hidden').addClass('is-visible');
-}
-
-</script>
-
-<div class="bg-img"></div>
 
 
 
