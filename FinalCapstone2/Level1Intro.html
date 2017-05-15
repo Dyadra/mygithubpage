@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GUY DRUGS</title>
+<style type="text/css">
+
+body {
+  margin: 0;
+  /*background: #000; */
+}
+
+	video#bgvid {     
+    width: auto;
+    height: auto;
+    
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+<video video id="myvid" controls="" autoplay id="bgvid">
+    <source src="GuyPillVid.mp4"  type="video/mp4">
+</video>
+
+<script type="text/javascript">
+	video = document.getElementById('myvid');
+video.addEventListener('ended',function() {alert('Lets play');       
+window.location.href = 'StuffNTHings/index.html';})
+
+
+</script>
+
+
+</body>
+</html>

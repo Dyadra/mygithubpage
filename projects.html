@@ -17,6 +17,8 @@
    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
  <link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade" rel="stylesheet">
+
  
 
   <style type="text/css">
@@ -68,8 +70,32 @@
   background: #9984D4;
   text-decoration: none;
 }
+
+.btn3{
+  border-radius: 50px;
+  text-shadow: 1px 4px 4px #230C33;
+  font-family: 'Paperclip';
+  position: absolute;
+  color: #0E103D;
+  font-size: 40px;
+  background: ##000066;
+  padding: 20px 20px 10px 20px;
+  text-decoration: none;
+  margin-left: 20px;
+  vertical-align: middle;
+  margin-top: 50px;
+}
+
+.btn3:hover {
+  color: #F2D7EE;
+  background: #9984D4;
+  text-decoration: none;
+}
 .cute:hover{
   background: rgba(153, 132, 212, 0.2);
+}
+
+#myButton{
 }
 
 @font-face {
@@ -99,7 +125,19 @@ h4{
     padding-left: 100px;
   }
 
+  .btn3{
+
+    position: relative;
+  }
+
 }
+
+ @media (min-width: 200px) and(max-width: 763px){
+    .navigation{
+      position: absolute;
+    }
+  
+ }
 
 
   </style>
@@ -149,6 +187,103 @@ h4{
 A short animation completed in the spring of 2014 using <strong>Dragonframe</strong> stop-motion editor and <b>Adobe Aftereffects</b>.  The short film tells the story of a young man who falls in love with a woman from another dimension. Their love is short-lived,once he discovers a flaw in her appearance. <br>
 Spring 2014.
 
+  </p>
+ </div>  
+ <!-- end col-md-6 -->
+</div>
+<!-- end row -->
+
+ <div class="row cute">
+ <div class="col-md-4 col-md-offset-3 col-sm-offset-3">
+      <a  class="btn3" href="FinalCapstone2/Capstone.html">Empathy Game</a>
+  </div>
+   <div class="col-md-4">
+   <h4>
+    <i>Empathy Game</i></h4>
+
+  <p>
+   The genre of empathy games is entirely cutting-edge. Game developers will try to create these new type of digital story telling devices that encompass actual human lives, rather than fantastical experiences. Made using P5.JS, music made using Tone. JS, and Animatiions made using Adobe Afteraffects.<br> (Best experienced in Safari Web Browser)
+    <br>
+    Spring 2017.
+
+  </p>
+ </div>  
+ <!-- end col-md-6 -->
+</div>
+<!-- end row -->
+
+<div class="row cute">
+ <div class="col-md-4 col-md-offset-3 col-sm-offset-3">
+      <img id="myButton" class="img-responsive" src="img/DailyDose2.jpg"  />
+        <script type="text/javascript">
+            var images = ['img/DailyDose1.jpg', 'img/DailyDose2.jpg', 'img/DailyDose3.jpg', 'img/DailyDose4.jpg'],
+                i = 1;
+
+            // preload
+            for (var j=images.length; j--;) {
+                var img = new Image();
+                img.src = images[j];
+            }
+
+            // event handler
+            document.getElementById('myButton').addEventListener('click', function() {
+                this.src = images[i >= images.length - 1 ? i = 0 : ++i];
+            }, false);
+        </script>
+    </body>
+  </div>
+   <div class="col-md-4">
+  
+
+   <h4>
+    <i>Daily/OverDose</i></h4>
+
+  <p>
+  Everyday, a vast amount of young adults have a routine of waking up, getting ready for the day, and taking their daily does of prescribed medication. It’s become so accustomed that so many people are entirely dependent on their medication. Eventually, it gets to the point where medication has becomes as vital to one's own existence as food and water. <br>
+    My goals was to make an installation that comments on the notion that medication has become a necessity for some people struggling with mental illnesses and emotional anxieties.  
+    <br>
+    Model: Stephanie Ulan
+    <br>
+    Fall 2016.
+  </p>
+ </div>  
+ <!-- end col-md-6 -->
+</div>
+<!-- end row -->
+
+<div class="row cute">
+ <div class="col-md-4 col-md-offset-3 col-sm-offset-3">
+      <img id="myButton2" class="img-responsive" src="img/LAPrisma4.jpg"  />
+        <script type="text/javascript">
+            var images2 = ['img/LAPrisma1.jpg', 'img/LAPrisma2.jpg', 'img/LAPrisma3.jpg','img/LAPrisma4.jpg'],
+                i = 1;
+
+            // preload
+            for (var j=images2.length; j--;) {
+                var img2 = new Image();
+                img2.src = images2[j];
+            }
+
+            // event handler
+            document.getElementById('myButton2').addEventListener('click', function() {
+                this.src = images2[i >= images2.length - 1 ? i = 0 : ++i];
+            }, false);
+        </script>
+    </body>
+  </div>
+   <div class="col-md-4">
+  
+
+   <h4>
+    <i>La Prisma</i></h4>
+
+  <p>
+     Sound and vision have a very complex relationship with one another; they both function
+     as modes of expression. La Prisma is an interactive installation that serves as a midi controller that interacts with projection mapping visuals. The controller is made using Arduino and Tone.JS with P5.JS serial communication. The sounds communicate with visuals that are then projection mapped. 
+    <br>
+    Group Members: Shirly Huang and Guillermo Carrasquero
+    <br>
+    Fall 2016.
   </p>
  </div>  
  <!-- end col-md-6 -->

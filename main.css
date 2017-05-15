@@ -1,7 +1,7 @@
 /* make sidebar nav vertical */ 
 @media (min-width: 200px) {
   .sidebar-nav .navbar .navbar-collapse {
-    padding: 20px;
+    padding: 2px;
     max-height: none;
     /*background: none;*/
    /*background-color: rgba(132,126,137, 0.9);*/
@@ -39,10 +39,10 @@ font-family: 'Paperclip';
 .navigation{
   background: none;
   border: none;
-  font-family: 'Paperclip';
+  font-family: 'Bungee Shade', cursive;
   color: white;
-  font-size: 30px;
-  margin-top: 40px ;
+  font-size: 20px;
+  margin-top: 20px ;
   position: fixed;
    z-index: +1;
 
@@ -59,7 +59,7 @@ a:active{
 
   @media (max-width: 762px){
    .sidebar-nav .navbar .navbar-collapse {
-      background-color: gray;
+      background-color: #b4bcdb;
   }
 }
 
