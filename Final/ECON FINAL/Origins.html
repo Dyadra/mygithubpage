@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Dyadra Saulsberry">
+    <link rel="icon" href="../../../../favicon.ico">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Raleway" rel="stylesheet">
+   <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+
+    <title>Income Inequality</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans|Raleway" rel="stylesheet">
+    <link href="css/origins.css" rel="stylesheet">
+    <style>
+	  
+		.tooltip{
+			background-color: black;
+   			color: #fff;
+    		text-align: center;
+    		padding: 5px 0;
+			
+		}
+		
+		.blog-header{
+		  font-family: 'Abril Fatface', cursive;
+/*	      font-size: 60px;*/
+		  background-color: #2E5266;
+		  color:#D3D0CB;
+		  padding: 20px;
+		  margin: 10px;
+
+		}
+		
+		.blog-header-logo{
+			color: aliceblue;
+			font-size: 40px;
+		}
+		
+		.blog-header-logo:hover {
+			color: #D3D0CB;
+		}
+		
+		.navbar-custom{
+			font-family: 'Open Sans', sans-serif; 
+		}
+		
+		.navbar > a 
+		{ color: #6E8898;
+		  font-family: 'Open Sans', sans-serif; 
+		}
+		
+		.navbar > a:hover 
+		{ color: #E2C044;
+		  font-family: 'Open Sans', sans-serif; 
+		  text-decoration: none;
+		  background-color: #6E8898;
+		  
+			  
+		}
+	
+	
+		
+		h1, h2, h3, h4, h5, h6 {
+        font-family: 'Open Sans', sans-serif;
+		text-align:center;
+}
+		
+		p{
+		 font-family: 'Raleway', sans-serif;
+
+		}
+		
+		.jumbotron{
+			
+			background-image: url(img/Shanghai-Inequality.jpg);
+			background-position: 0% 25%;
+			background-size: cover;
+    		background-repeat: no-repeat;
+			color: whitesmoke;
+
+		}
+		
+		
+		#mapid { height: 180px; }
+		img {
+        	display:block;
+    			margin:auto;
+			}
+		
+		#myBtn {
+			
+		  font-family: 'Abril Fatface', cursive;
+		  background-color: #2E5266;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #E2C044;
+}
+		
+	  
+	  </style>
+    
+    
+  </head>
+
+  <body>
+
+    <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-12 text-center">
+            <a class="blog-header-logo" href="../main shizz.html">The Residential Structure of Inequality</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="py-1 mb-2">
+        <nav class="nav navbar d-flex justify-content-between navbar-custom">
+          <a class="p-2 " href="../main shizz.html">Home</a>
+          <a class="p-2 " href="Origins.html">Income Inequality</a>
+          <a class="p-2 " href="IncomeSegregation.html">Income Segregation</a>
+          <a class="p-2 " href="PsychImpacts.html">Impacts</a>
+          <a class="p-2 " href="Policy Implications.html">Solutions</a>
+
+        </nav>
+      </div>
+
+      <div class="jumbotron p-3 p-md-5 rounded bg-dark">
+        <div class="col-md-6 px-0">
+			<h1 class="display-4 font-italic"></h1>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+       <br>
+       <br>
+       <br>
+      
+        </div>
+      </div>
+		<br>
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-12 blog-main">
+          <div class="blog-post">
+            <h2 class="blog-post-title border-bottom">Wealth Inequality</h2>
+            <br>
+            <p>Wealth inequality is the cause of an abundance of political conflict in modern society. In 2017, over <strong> 82%</strong> of the global wealth went to the top 1% of earners across the globe in 2017. <sup>1</sup> This increase in wealth disparities is expected to rise within the upcoming years in result of political decisions and protective barriers for the rich. Income Inequality across regions is measured by <i>"the Gini Coefficient" </i>, an index used to access wealth distribution and access income inequality. For example, a country with complete equality has Gini Coefficient of 0, while a country where one person owns all the wealth has a Gini of 1. </p>
+             <iframe src="https://ourworldindata.org/grapher/economic-inequality-gini-index?year=2015&country=ISR" style="width: 100%; height: 600px; border: 0px none; padding: 20px"></iframe>
+             <br>
+             <br>
+          
+
+            <img src="img/Top Income Share Across the World.jpg" class="img-fluid" alt="Responsive image" style="padding: 20px">
+            <figcaption class="figure-caption"> Presented is the share of national income that is owned by the Top 10% across the most unequal regions<cite> World Inequality Database.<sup>2</sup></cite></figcaption>
+
+            <hr>
+            <br>
+           
+            <p> Inequality differs largely by country. Interested in where you might rank across the globe? Use this tool by <cite>Care International </cite> to see if you are part of the Global 1%! </p>
+            <hr>
+              <iframe src="http://www.globalrichlist.com/" style="width: 100%; height: 600px; border: 0px none;"> <p>Your browser does not support iframes.</p>
+			</iframe>
+
+            <h2>Inequality in the United States</h2>
+            <hr>
+            <br>
+
+
+            <p>Across all "developed" nations, wealth inequality is the highest in the United States. We have come to the point in society where inequality has now become a defining characteristic of our country. In large metropolitan cities, a commonplace experience is witnessing rampant homeless amidst the sea of luxury condominiums and designer stores. This upsetting juxtaposition will likely continue as income inequality rises in the United States.  The Gini coefficient for the US is a staggering 41.5 <sup>3</sup>, making the US the <strong> most</strong> unequal developed country in the world. </p>
+            <br>
+            <p>Wealth dispersion wasn’t always like this in the US.  During the Great Depression, the United States saw a dramatic rise in poverty and homelessness around the country. Political efforts sought to combat this were not only warranted, they were demanded. President Roosevelt's <i>New Deal </i> passed a series of federal programs and regulations with the goal of ameliorating the economic dysfunction within the United States. After WWII, the country saw a radical reformation in the workplace along with the decline in union membership. This led to inequalities between the overall income of the average worker and their employers, with CEO’s exceedingly making exponential growths in their income compared to the average worker. <sup>4</sup> Those trends continue today, with the average CEO making 354: 1 ratio of the wealth to everyday workers. <sup>1</sup> </p>
+            <br>
+            <img src="img/real-weekly-wages.png" class="img-fluid .max-width: 40%; display:block;" alt="Responsive image" style="padding: 20px">
+            <figcaption class="figure-caption"> US Weekly earnings from 1979s to 2016, demonstrating the growth in the earnings of the 10% compared to the 90%, <cite> Bureau of Labor Statistics, U.S. Department of Labor</cite> <sup>5</sup>. </figcaption>
+
+             <br>
+             <br>
+            <img src="img/inequality-top-chart-Picketty.jpg" class="img-fluid .max-width: 50%" alt="Responsive image">
+            <figcaption class="figure-caption" style="padding: 20px"> The change in income between the 1980s and 2014, showing the rise (and fall) in income growth between all percentiles in the US <cite>
+            World Inequality Report</cite> <sup>2</sup>. </figcaption>
+     
+		  </div> 
+          </div><!-- /.blog-post -->
+        </div><!-- /.blog-main -->
+
+        <div>
+
+        <h4>
+          References
+        </h4>
+        <hr>
+          <ol>
+            <li>Alejo Vázquez Pimentel, D., Macías Aymar, I., & Lawson, M. (2018). <cite>Reward Work, Not Wealth: To end the inequality crisis, we must build an economy for ordinary working people, not the rich and powerful.</cite> Oxfam. https://doi.org/10.21201/2017.1350 </li>
+
+            <li>
+              Alvaredo, F., Chancel, L., Piketty, T., Saez, E., & Zucman, G. (2017).<cite> World inequality report 2018. </cite> The World Inequality Lab, http://wir2018. wid. world.
+            </li>
+            <li>
+              Data.worldbank.org. (2018). 
+              <cite> GINI index|Data. </cite> [online] Available at: https://data.worldbank.org/indicator/SI.POV.GINI [Accessed 03 March, 2018].
+            </li>
+            <li>
+              <cite>Jimmy Carter. (n.d.). </cite> In Wikipedia. Retrieved March 15, 2018, from https://en.wikipedia.org/wiki/Great_Depression
+            </li>
+          <li>
+            Bureau of Labor Statistics, U.S. Department of Labor, <cite>US Weekly Wages </cite>  at https://www.bls.gov/cps/earnings.htm(visited April 06, 2018).
+
+          </li>
+
+
+          </ol>
+
+        </div>
+
+    </main><!-- /.container -->
+    
+	  </div>
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <footer class="blog-footer">
+     <p>Dyadra Saulsberry 2018</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+    
+    <script>
+		window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+		</script>
+    
+    
+  </body>
+</html>

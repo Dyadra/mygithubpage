@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Dyadra Saulsberry">
+    <link rel="icon" href="../../../../favicon.ico">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+
+    
+    <script src="../mobility/libraries/p5.play.js"></script>
+		<script src="../mobility/libraries/p5.js"></script>
+		<script src="../mobility/libraries/p5.dom.js"></script>
+		<script src="../mobility/libraries/p5.sound.js"></script>
+		<script src="../mobility/sketch.js"></script>
+
+    <title>the Impacts of Income Segregation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Raleway" rel="stylesheet">
+    <link href="css/origins.css" rel="stylesheet">
+    <style>
+		
+		
+		body {padding: 0; margin: 0;}
+        canvas {vertical-align: top;}
+	  
+		.tooltip{
+			background-color: black;
+   			color: #fff;
+    		text-align: center;
+    		padding: 5px 0;
+			
+		}
+		
+		.blog-header{
+		  font-family: 'Abril Fatface', cursive;
+/*	      font-size: 60px;*/
+		  background-color: #2E5266;
+		  color:#D3D0CB;
+		  padding: 20px;
+		  margin: 10px;
+
+		}
+		
+		.blog-header-logo{
+			color: aliceblue;
+			font-size: 40px;
+		}
+		
+		.blog-header-logo:hover {
+			color: #D3D0CB;
+		}
+		
+		.navbar-custom{
+			font-family: 'Open Sans', sans-serif; 
+		}
+		
+		.navbar > a 
+		{ color: #6E8898;
+		  font-family: 'Open Sans', sans-serif; 
+		}
+		
+		.navbar > a:hover 
+		{ color: #E2C044;
+		  font-family: 'Open Sans', sans-serif; 
+		  text-decoration: none;
+		  background-color: #6E8898;
+		  
+			  
+		}
+		
+		.center{ 
+         padding: -225px 0 0 -200px;
+}
+
+	
+	
+		
+		h1, h2, h3, h4, h5, h6 {
+        font-family: 'Open Sans', sans-serif;
+		text-align:center;
+}
+		
+		p{
+		 font-family: 'Raleway', sans-serif;
+
+		}
+		
+		.jumbotron{
+			
+			background-image: url(img/Shanghai-Inequality.jpg);
+			background-position: 0% 25%;
+			background-size: cover;
+    		background-repeat: no-repeat;
+
+		}
+		
+		
+		#mapid { height: 180px; }
+		img {
+        	display:block;
+    			margin:auto;
+			}
+		
+		#myBtn {
+			
+		  font-family: 'Abril Fatface', cursive;
+		  background-color: #2E5266;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #E2C044;
+}
+		
+		.img-thumbnail{
+			width: 50%;
+		}
+		
+		.figure-caption{
+			text-align: center;
+		}
+
+    li > a {
+      color: #2E5266;
+      }
+    li > a:hover {
+      color: #E2C044;
+      text-decoration: none;
+      }
+		
+		
+		.baby[
+		 display: block;
+         margin-left: auto;
+         margin-right: auto;
+		]
+		
+	  
+	  </style>
+    
+    
+  </head>
+
+  <body>
+
+    <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-12 text-center">
+            <a class="blog-header-logo" href="../main shizz.html">The Residential Structure of Inequality</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="py-1 mb-2">
+        <nav class="nav navbar d-flex justify-content-between navbar-custom">
+          <a class="p-2 " href="../main shizz.html">Home</a>
+          <a class="p-2 " href="Origins.html">Income Inequality</a>
+          <a class="p-2 " href="IncomeSegregation.html">Income Segregation</a>
+          <a class="p-2 " href="PsychImpacts.html">Impacts</a>
+          <a class="p-2 " href="Policy Implications.html">Solutions</a>
+
+
+        </nav>
+      </div>
+
+      <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark" >
+      	 <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+       <br>
+       <br>
+       <br>
+      	
+      </div>
+
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-6 px-0"></div>
+        <div class="col-md-12 blog-main">
+		  <h2>The Psychological Impacts of Income Segregation</h2>
+      <hr>
+		  <p> This article will focus on four effects of residential income Segregation:</p>
+		  <ul>
+ 			 <li> <a href="#SocialInequality" > Social Inequality </a></li>
+ 			 <li> <a href="#Education Inequality" > Social Mobility</a></li>
+ 			 <li> <a href="#Health Effects" > Health Effects</a></li>
+ 			 <li><a href="#Racial Segregation" > Racial Segregation</a></li>
+		 </ul>  
+
+		  
+		  <br>
+		  <div class="blog-post">
+            
+				<h3> <a name="SocialInequality"> Social Inequality</a> </h3>
+
+            <hr>
+           <p>Social Inequality refers to the unequal distribution of resources and opportunities to individuals based on their status in the social hierarchy.  When it comes to housing accessibility, people are often not permitted access to certain neighborhoods due to discrimination based on their income source, race, family composition, etc. With limited access to these neighborhoods, it is likely that people with certain SES status will remain restricted in their residential locations. Often time’s social inequalities are exacerbated by neighborhood effects, such as concentrated poverty, community violence, or truancy. These effects often lead to stigmatization of the people that reside in those neighborhoods which further continues the cycle of residential income segregation. 
+            </p>
+            <br>
+            
+            <img src="img/havenots.jpg" class="img-fluid" alt="Responsive image">
+            <br>
+            
+            <p>Children are the most impacted by the social inequalities that emerge from residential income segregation. Children are directly impacted by environmental factors that they are constantly exposed to via social learning mechanism. Neighborhoods that are high in community violence and risk behaviors are often low in educational and job attainment. For children who are reared in these types of communities, they are bound to perceive these negative influences as more commonplace, which may limit their potential to rise beyond their social class.<sup>1</sup> 
+</p>
+            
+
+            <h3><a name="Education Inequality">Social mobility</a></h3>
+
+            <hr>
+           <p>Upward mobility is highly tied to economic standing and access to equal opportunities. Studies show that one of the contributing factors of intergenerational income stagnation is educational attainment and lack of economic empowering network influences. Neighborhoods with high levels of wealth are more likely to have greater access to high quality community resources. Neighborhoods with primarily low-income residents may not have access to the resources and opportunities that are outside of their neighborhood, and may have to settle for substandard versions. For persons that live in a highly segregated low-income community, there may be limited access to resources that can intercept a cycle of poverty (higher job opportunities, higher quality schools,  higher-status networked connections). 
+            </p>
+            <br>
+            <div id="jumbo-canvas"> </div>
+           
+           <p> P5 SKETCH GOES HERE</p>
+           <hr>
+           <br>
+           <p>
+           	Educational attainment and job placement are key components of social mobility. Schools in highly segregated low-income areas on average perform worse than schools in higher income areas. <sup>2</sup>   Nearly half of the funding for public schools come from the local government, which receives those funds through taxation. For schools that are in areas of low-income, there are bound to receive less funding due to the smaller share of wealth these individuals may have. This leads to poor quality educational programs and less qualified teachers within those schools. As a result, the children who attend these schools will often receive an inferior standard of education and may be likely to underperform their peers in higher income neighborhoods. With a lower performance in school, this will limit their occupational opportunities after graduation, which limit their ability to move of their social standing. <sup>2</sup> </p>
+           	<br>
+           	<br>
+           <div class="row">
+           	<div class="col-md-6">
+    			<div class="thumbnail">
+          			<img src="img/NYCSTUDENTSCORE.jpg" style="width:90%">
+				</div>
+          			</div>
+          			
+          				<div class="col-md-6">
+    			<div class="thumbnail">
+          			<img src="img/NYCPOVERTY.png" style="width:130%">
+				</div>
+          			</div>
+          			<br>
+           	<br>
+          	<br>
+           	<figcaption class="figure-caption" style="text-align: center"> Student 4th Grade Math Performance by Neighborhood, NYC Poverty Levels by Census Tract <cite> NYU Furman Center.<sup>6 7</sup></cite>  </figcaption>
+		
+           	
+           </div>
+           <br>
+           <br>
+    
+               
+    		<h3> <a name="Health Effects">Health Effects</a></h3>
+
+            <hr>
+           <p>Housing quality has an enormous influence on the physical and mental health of the individuals that reside in them. Studies shows that a majority of physical injuries occur inside the household<sup>3</sup>. In large metropolitan areas, population density often leads to overcrowding, inadequate housing, and an increase in maintenance defects.  Homes with substandard conditions might be infiltrated with pest, mold, and poor ventilation. This can lead to a variety of chronic health defects and infections. Maintenance defects within these homes can lead to poor air quality, lead poisoning, and lack of temperature regulation, which for younger children and some adults can affect cognitive development and aggravate conditions like asthma or respiratory infections<sup>3</sup>.
+
+            </p>
+            <br>
+            
+            <object  id="emViz_disparities" width="60%" height="auto" data="http://a816-dohbesp.nyc.gov/IndicatorPublic/Embedded/NewDisparities.aspx?id=2184,4466a0,14,Disparities,Rate%20%20BLL%3E=5%20%C2%B5g/dL,years=2005;2011;2016,dataLink=Neighborhood%20Poverty"style="overflow: hidden; margin-left: 30%"></object>
+            <br>
+            <figcaption class="figure-caption"><cite>NYC Open Data. 2018.</cite>  </figcaption>
+            <br>
+            
+            <p>
+            	A neighborhood’s characteristics may encourage positive wellbeing by providing areas that are free from crime, violence and pollution for children and adults to play or exercise. Neighborhoods with limited liquor stores and fast food establishments and with accessible grocery stores can make it easier for families to find and eat healthful foods. Socioeconomic conditions in neighborhoods may improve health by affording access to employment opportunities and public resources including efficient transportation, an effective police force and high-performing schools. Access to neighborhoods with health-promoting conditions varies with household economic and social resources. Concentration of low quality housing in disadvantaged neighborhoods further worsens ethnic socioeconomic differences in health.<sup>4</sup> 
+            	
+            </p>
+            
+           
+           	<div class="row">
+           	<div class="col-md-6">
+            
+             <object  id="emViz_Map" width="50%" height="100%" data="http://a816-dohbesp.nyc.gov/IndicatorPublic/Embedded/Map.aspx?id=84,4466a0,11,Map,Rate,2014" style="overflow: hidden; margin-left: 30%;"></object>
+             </div>
+             	<div class="col-md-6">
+             <object  id="emViz_Map2" width="50%" height="100%" data="http://a816-dohbesp.nyc.gov/IndicatorPublic/Embedded/Map.aspx?id=107,719b87,8,Map,Percent,2014" style="overflow: hidden;"></object>
+				</div>
+        		            
+
+         		
+       		</div>
+        		<figcaption class="figure-caption" style="text-align: center"><cite>NYC Open Data. 2018.</cite>  </figcaption>
+         		
+         		
+         			<br>
+         			<br>
+           <h3><a name="Racial Segregation">Racial Segregation</a></h3>
+
+            <hr>
+           <p>Studies demonstrate that racial segregation combined with income segregation means that low-income black and Hispanic families will tend to cluster in communities that are disadvantaged along a number of dimensions, such as average educational attainment, family structure, and unemployment. In contrast, low-income white families, although affected by income segregation as well, tend to live in neighborhoods with higher average incomes than even middle-class black and Hispanic families.<sup>5</sup> 
+				<br>
+           <br>
+            
+                        <img src="img/race+mobility.jpg" class="img-fluid" alt="Responsive image">
+                     			<figcaption class="figure-caption"><cite>Pew Research Center</cite> <sup>8</sup>  </figcaption>
+
+
+
+            </p>
+            <br>
+            
+            <p>
+            	There has a variety of reasons including:
+		    <ul>
+				<li> Racial discrimination in housing </li>
+				<li> Individual preferences </li>
+			</ul>
+
+
+<p>Black individuals are more likely to be witness to a practice called “steering”, where a real estate broker or agent may persuade them to move to a less ideal location. Because of this, black tenants are more likely to reside in neighborhoods with predatory lending practices, which hinders economic growth <sup>5</sup> </p>
+
+<p>Sometimes, it may be that members of racial subgroups prefer to live close to cultural institutions or entities that strike familiarity within their racial subgroup. Particularly for affluent minorities, we see that they may often prefer to live in a neighborhood with lower quality opportunism and resources, but with higher population of members in their ethnic group. This may also be due to racial discrimination in non-minority neighborhoods. <sup>5</sup>
+</p>
+           	
+            	
+            </p>
+            
+            
+            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.socialexplorer.com/8b4bdd753e/embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+            <figcaption class="figure-caption"><cite>Total Population Black or African American Alone/Civil Population Unemployed.</cite> <sup>9</sup>  </figcaption>
+
+
+            
+           
+          </div><!-- /.blog-post 
+        </div><!-- /.blog-main -->
+		  </div>
+		  
+		  
+		  
+		  <div>
+
+        <h4>
+          References
+        </h4>
+        <hr>
+          <ol>
+            <li>Abramson, Alan J., Mitchell S. Tobin, and Matthew R. VanderGoot. 1995. <cite>The Changing
+					Geography of Metropolitan Opportunity: The Segregation of the Poor in U.S.
+				Metropolitan Areas, 1970 to 1990.</cite> Housing Policy Debate 6:45–72.rg/10.21201/2017.1350 </li>
+
+            <li>
+              Jenkins, Stephen P., John Micklewright, and Sylke V. Schnepf. 2006. <cite>Social Segregation
+in Schools: An International Comparison.</cite> 
+              Jelleyman T and Spencer N. <cite>Residential Mobility in Childhood and Health Outcomes: A Systematic Review.</cite> J Epidemiol
+Community Health, 62(7): 584-92, 2008.
+            </li>
+            <li>
+            	Krieger J and Higgins DL. "Housing and Health: Time Again for Public Health Action." Am J Public Health, 92(5): 758-68,
+2002.
+			  </li>
+
+            <li>
+              Logan, John R. 2011. <cite>Separate and Unequal: The Neighborhood Gap for Blacks, Hispanics, and Asians in Metropolitan
+				America</cite> US2010 Project (July). Available at: www.s4.brown.edu/us2010/Data/Report/report0727
+           (accessed May 1, 2018).
+            </li>
+          <li>
+            Logan, John R., and Brian J. Stults. 2011. <cite>The Persistence of Segregation in the Metropolis: New Findings from the
+				2010 Census.</cite> US2010 Project (March 24). Available at: www.s4.brown.edu/us2010/Data/Report/report0727
+				.pdf (accessed May 1. 2018).
+
+          </li>
+          
+          <li>
+          	State of New York City’s Housing and Neighborhoods in 2015. Fourth Grade Student Performance [Map]. 2015. NYU Furman Center(acccessed April 28th, 2018)
+          </li>
+          
+          <li>
+          	State of New York City’s Housing and Neighborhoods in 2015. NYC Poverty Status by Census Map [Map]. 2015. NYU Furman Center(acccessed April 28th, 2018)
+
+          </li>
+          <li>
+          	Sharkey, P. (2009). Neighborhoods and the black-white mobility gap. Economic Mobility Project.
+          </li>
+          
+          <li>
+          	
+          	Social Explorer. <cite>Total Population Black or African American Alone/Civil Population Unemployed.</cite>. 2016. based on data from U.S. Census Bureau (accessed May 7th, 2018).
+          </li>
+
+
+          </ol>
+
+        </div>
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+ 
+      </div><!-- /.row -->
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+    </main><!-- /.container -->
+    
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+    <footer class="blog-footer">
+     <p>Dyadra Saulsberry </p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+    
+    <script>
+		window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+	
+
+}
+		</script>
+		
+		 <script type="text/javascript" src="http://a816-dohbesp.nyc.gov/IndicatorPublic/Embedded/Embedded.js"></script>
+
+		
+		
+		
+		
+  </body>
+</html>
