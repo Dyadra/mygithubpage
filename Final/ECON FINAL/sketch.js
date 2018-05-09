@@ -11,14 +11,14 @@ var myCanvas;
 function preload() {
   img = loadImage('img/ladder-green-md.png');
   img2= loadImage('img/person.png');
-  myFont = loadFont('img/AbrilFatface-Regular.ttf');
+  // myFont = loadFont('img/AbrilFatface-Regular.ttf');
 }
 
 
 function setup() {
-  var myCanvas = createCanvas(820, 450);
-  background(0);
-  
+  var myCanvas = createCanvas(600, 400);
+  myCanvas.parent('myContainer');
+}
   
   PersonSprite = createSprite(155, 300,50,50);
   PersonSprite.addImage(img2);
